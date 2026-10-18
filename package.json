@@ -1,0 +1,25 @@
+{
+  "name": "tank-battle",
+  "productName": "Танковый бой",
+  "version": "1.0.0",
+  "description": "Танковый бой — игра для ПК",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable --publish never",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux AppImage"
+  },
+  "build": {
+    "appId": "com.tankbattle.game",
+    "productName": "Танковый бой",
+    "files": ["main.js", "game/**/*"],
+    "win": { "target": "portable" },
+    "mac": { "category": "public.app-category.games" },
+    "linux": { "target": "AppImage", "category": "Game" }
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}
