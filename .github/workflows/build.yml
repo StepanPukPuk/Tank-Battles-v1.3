@@ -11,9 +11,6 @@ permissions:
 jobs:
   windows:
     runs-on: windows-latest
-    defaults:
-      run:
-        working-directory: TankBattle
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -24,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: TankBattle
-          path: TankBattle/dist/TankBattle.exe
+          path: dist/TankBattle.exe
